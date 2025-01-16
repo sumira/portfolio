@@ -7,7 +7,7 @@ export default function Home() {
       <nav className="fixed w-full bg-black/20 backdrop-blur-sm z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <span className="text-2xl font-bold">SumiraGP</span>
+            <span className="text-2xl font-bold">Sumira GP</span>
             <div className="hidden md:flex space-x-8">
               <a
                 href="#about"
