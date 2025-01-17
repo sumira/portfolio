@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        poppins: ['var(--font-poppins)'],
+        sans: ['var(--font-geist-sans)'], // This will be your default font
+        mono: ['var(--font-geist-mono)'],
+      },
     },
   },
   plugins: [],
