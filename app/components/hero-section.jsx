@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   const ROLES = useMemo(() => [
     "Full Stack Developer",
-    "Mobile Application Developer",
+    "Mobile Apps Developer",
     "IoT Systems Developer"
   ], []);
 
