@@ -19,7 +19,6 @@ const HeroSection = () => {
     TYPING: 100
   };
 
- 
   const rotateRole = useCallback(() => {
     setRole(currentRole => {
       const currentIndex = ROLES.indexOf(currentRole);
@@ -27,12 +26,10 @@ const HeroSection = () => {
     });
   }, [ROLES]);
 
-
   useEffect(() => {
     const interval = setInterval(rotateRole, TIMING.INTERVAL);
     return () => clearInterval(interval);
   }, [rotateRole, TIMING.INTERVAL]);
-
 
   useEffect(() => {
     setDisplayText("");
@@ -88,7 +85,7 @@ const HeroSection = () => {
               </motion.h2>
             </AnimatePresence>
           </div>
-          
+
           <div className="hidden md:block w-1 h-80 bg-gradient-to-b from-transparent via-blue-500/50 to-transparent" />
 
           <div className="flex-1 text-center md:text-left">
