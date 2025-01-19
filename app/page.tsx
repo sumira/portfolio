@@ -1,7 +1,7 @@
 import NavBar from "./components/nav-bar";
 import HeroSection from "./components/hero-section";
 import Projects from "./components/project-section";
-// import Skills from "./components/skills-section";
+import Skills from "./components/skills-section";
 // import ContactUS from "./components/contact-us";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <NavBar />
       <HeroSection />
       <Projects />
-      {/* <Skills /> */}
+      <Skills />
       {/* <ContactUS /> */}
 
       {/* Contact Section */}
