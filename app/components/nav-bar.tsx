@@ -38,6 +38,13 @@ const NavBar = () => {
               About
             </a>
             <a
+              href="#education"
+              className="text-gray-300 hover:text-blue-400 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Education
+            </a>
+            <a
               href="#projects"
               className="hover:text-blue-400 transition-colors"
             >
@@ -80,6 +87,13 @@ const NavBar = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   About
+                </a>
+                <a
+                  href="#education"
+                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Education
                 </a>
                 <a
                   href="#projects"
