@@ -58,16 +58,28 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent" />
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="flex-1 text-center flex flex-col items-center md:items-center">
-            <Image
-              src="/assets/profile.png"
-              alt="Profile picture"
-              width={340}
-              height={340}
-              className="mb-4 transition-all duration-300 hover:scale-105"
-              priority
-            />
-            <h1 className="font-poppins font-medium text-4xl md:text-6xl mb-4 bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
+          <div className="flex-1 text-center flex flex-col items-center md:items-center mt-12">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative w-[300px] h-[300px] rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-blue-600 p-1"
+            >
+              <div 
+                className="absolute inset-0 rounded-full blur-md bg-gradient-to-r from-sky-400 via-blue-500 to-blue-600 opacity-60"
+              />
+              <div 
+                className="relative w-full h-full rounded-full bg-black/50 backdrop-blur-sm overflow-hidden"
+              >
+                <Image
+                  src="/assets/profile.png"
+                  alt="Profile picture"
+                  width={300}
+                  height={300}
+                  className="w-full object-cover object-center rounded-full"
+                  priority
+                />
+              </div>
+            </motion.div>
+            <h1 className="mt-5 font-poppins font-medium text-4xl md:text-6xl mb-4 bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
               Sumira Pathirana
             </h1>
             <AnimatePresence mode="wait">
