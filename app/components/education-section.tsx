@@ -12,7 +12,6 @@ const Education = () => {
 
         <div className="font-poppins text-gray-300 max-w-3xl mx-auto">
           <div className="relative">
-            {/* Timeline line - hidden on mobile */}
             <div className="hidden md:block absolute left-1/2 h-full w-0.5 bg-blue-500/20 transform -translate-x-1/2" />
 
             <div className="space-y-12">
@@ -25,7 +24,6 @@ const Education = () => {
                   <p className="text-gray-400 mt-2">2021 - 2025</p>
                 </div>
 
-                {/* Dot - hidden on mobile */}
                 <div className="hidden md:block">
                   <div
                     className="w-4 h-4 bg-blue-500 rounded-full relative z-10 
@@ -78,7 +76,7 @@ const Education = () => {
                               hover:bg-white/10 hover:border-blue-500/20 transition-all duration-300"
                   >
                     <p className="text-gray-300 text-center text-sm md:text-justify">
-                      St.Servatius College, Matara
+                      St.Servatius College, Matara, Sri Lanka
                     </p>
                   </div>
                 </div>
@@ -111,7 +109,7 @@ const Education = () => {
                               hover:bg-white/10 hover:border-blue-500/20 transition-all duration-300"
                   >
                     <p className="text-gray-300 text-sm md:text-justify text-center">
-                      Telijjawila Central College, Matara
+                      Telijjawila Central College, Matara, Sri Lanka
                     </p>
                   </div>
                 </div>
