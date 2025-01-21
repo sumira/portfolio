@@ -1,5 +1,7 @@
 "use client";
 
+import { FaGithub } from "react-icons/fa";
+
 import {
   SiMongodb,
   SiTypescript,
@@ -12,6 +14,7 @@ import {
   SiClerk,
   SiZod,
   SiMqtt,
+  SiTailwindcss,
 } from "react-icons/si";
 import { BiMobileAlt } from "react-icons/bi";
 
@@ -31,6 +34,8 @@ const techStackIcons: { [key: string]: JSX.Element } = {
   Clerk: <SiClerk className="text-[#6C47FF]" />,
   Zod: <SiZod className="text-[#3E67B1]" />,
   MQTT: <SiMqtt className="text-[#ca0c0c]" />,
+  GitHub: <FaGithub className="text-[#181717]" />,
+  TailwindCSS: <SiTailwindcss className="text-[#06B6D4]" />,
 };
 
 const projectData = [
@@ -41,18 +46,18 @@ const projectData = [
       "BPulse is a battery capacity tester that monitors current, voltage, and temperature during discharging for accurate analysis. Integrated with a Next.js web app, it enables real-time control, data visualization, and historical analysis through a user-friendly interface.",
     image: "assets/projects/bpulse.jpg",
     tech: ["NextJS", "MQTT", "MongoDB", "Arduino", "ESP32"] as const,
-    github: "",
-    demo: "https://demo-link.com",
+    github: "https://github.com/sumira/BPulse",
+    demo: "",
   },
   {
     id: 2,
     title: "Aquashield",
     description:
-      "AquaShield is a water leak detection system that monitors flow rates to identify sudden leaks in domestic settings. Powered by an ESP32, it provides real-time alerts and notifications, helping users prevent water wastage and damage effectively.",
+      "AquaShield is a water leak detection system that monitors flow rates to identify sudden leaks in domestic settings. Powered by an ESP32, it provides real-time alerts and notifications, helping users prevent water wastage and damage effectively by real time monitoring.",
     image: "assets/projects/aquashield.jpg",
     tech: ["ESP32", "Arduino", "GSM"] as const,
-    github: "https://github.com/username/project1",
-    demo: "https://demo-link.com",
+    github: "https://github.com/sumira/AquaShield",
+    demo: "",
   },
   {
     id: 3,
@@ -60,9 +65,9 @@ const projectData = [
     description:
       "The Vishwa Institute Management System streamlines student, course, and staff management for Vishwa Institute in Balangoda, Sri Lanka. With secure authentication, role-based access, and responsive design, it offers a user-friendly platform tailored to the institute's needs.",
     image: "assets/projects/vishwa.jpg",
-    tech: ["NextJS", "MongoDB", "Clerk", "Zod"],
-    github: "https://github.com/username/project1",
-    demo: "https://demo-link.com",
+    tech: ["NextJS", "MongoDB", "Clerk", "Zod", "TailwindCSS"] as const,
+    github: "https://github.com/sahan-chinthaka/vishwa-institute",
+    demo: "",
   },
 ];
 
@@ -105,9 +110,22 @@ const Projects = () => {
                   />
                 </div>
 
-                <p className="text-tiny text-white/80 mt-5 text-justify font-poppins px-2">
+                <p className="text-tiny text-white/70 mt-5 text-justify font-poppins px-2">
                   {project.description}
                 </p>
+
+                <div className="flex justify-center gap-4 mt-4">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full hover:bg-gray-700/50 transition-colors"
+                    >
+                      <FaGithub className="w-6 h-6 text-gray-400 hover:text-white" />
+                    </a>
+                  )}
+                </div>
               </CardBody>
             </Card>
           ))}
