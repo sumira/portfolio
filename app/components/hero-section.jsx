@@ -138,10 +138,32 @@ const HeroSection = () => {
                 Specializing in <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">full-stack development</span> with expertise in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">React</span>, <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Node.js</span>, and cloud technologies.
                 Committed to creating <span className="bg-blue-700 bg-clip-text text-transparent">efficient, scalable</span>, and user-friendly applications.
               </p>
+              <div className="px-2 mt-4 flex justify-center gap-6 ">
+             <a
+              href="https://github.com/sumira/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl text-gray-400 hover:text-blue-500 transition-colors"
+            >
+              <FaGithub size={30} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/sumira-pathirana/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl text-gray-400 hover:text-blue-500 transition-colors"
+            >
+              <FaLinkedin size={30}/>
+            </a>
+
+            </div>
             </motion.div>
 
-            <div className="px-2">HEllo</div>
+            
 
+              
+    
             
           </div>
           
