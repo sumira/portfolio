@@ -49,6 +49,39 @@ const Education = () => {
                 </div>
               </div>
 
+              {/* Diploma */}
+              <div className="relative flex flex-col md:flex-row items-center group">
+                <div className="flex-1 w-full md:w-auto text-center md:text-right md:pr-8 mb-4 md:mb-0">
+                  <h3 className="text-xl font-semibold text-blue-400 transition-colors group-hover:text-blue-300">
+                    Diploma in Software Engineering (Pearson Assured)
+                  </h3>
+                  <p className="text-gray-400 mt-2">2020</p>
+                </div>
+
+                <div className="hidden md:block">
+                  <div
+                    className="w-4 h-4 bg-blue-500 rounded-full relative z-10 
+                              group-hover:scale-150 transition-all duration-300"
+                  >
+                    <div
+                      className="absolute w-8 h-8 bg-blue-500/20 rounded-full -m-2 
+                                animate-ping opacity-75"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex-1 w-3/4 md:w-auto md:pl-8">
+                  <div
+                    className="p-4 bg-white/5 rounded-lg border border-transparent 
+                              hover:bg-white/10 hover:border-blue-500/20 transition-all duration-300"
+                  >
+                    <p className="text-gray-300 text-center text-sm md:text-justify">
+                      Esoft Metro Campus
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               {/* A/L */}
               <div className="relative flex flex-col md:flex-row items-center group">
                 <div className="flex-1 w-full md:w-auto text-center md:text-right md:pr-8 mb-4 md:mb-0">
