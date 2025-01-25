@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useState } from "react";
@@ -32,6 +33,7 @@ const ContactUS = () => {
       }
     } catch (error) {
       setStatus("error");
+      console.error("Error sending email:", error);
     }
 
     setLoading(false);
