@@ -145,7 +145,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="text-2xl text-gray-400 hover:text-blue-500 transition-colors"
             >
-              <FaGithub size={30} />
+              <FaGithub size={25} />
             </a>
 
             <a
@@ -154,7 +154,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="text-2xl text-gray-400 hover:text-blue-500 transition-colors"
             >
-              <FaLinkedin size={30}/>
+              <FaLinkedin size={25}/>
             </a>
 
             </div>
