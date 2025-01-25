@@ -13,7 +13,7 @@ import {
   SiCplusplus,
 } from "react-icons/si";
 import { BiMobileAlt } from "react-icons/bi";
-import { FaServer } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
 import { JSX } from "react";
 
 export interface Skill {
@@ -64,7 +64,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Node.js",
-    icon: <FaServer className="text-[#339933]" />,
+    icon: <FaNodeJs className="text-[#339933]" />,
     category: "Backend",
   },
 
@@ -111,7 +111,7 @@ export const skillsData: Skill[] = [
     category: "Programming Languages",
   },
   {
-    name: "Java",
+    name: "Typescript",
     icon: <SiTypescript className="text-[#007396]" />,
     category: "Programming Languages",
   },
