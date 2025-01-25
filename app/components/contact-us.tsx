@@ -1,7 +1,44 @@
+"use client";
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useState } from "react";
 
 const ContactUS = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sucess" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("idle");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("sucess");
+        setFormData({ email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+      console.error("Error sending email:", error);
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div>
       <section id="contact" className="py-20 bg-black/30">
@@ -11,7 +48,7 @@ const ContactUS = () => {
           </h2>
 
           <div className="max-w-xl mx-auto space-y-8">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="email"
@@ -46,10 +83,25 @@ const ContactUS = () => {
 
               <button
                 type="submit"
-                className="w-full py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-800  text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
+                disabled={loading}
+                className={`w-full py-2 px-4 bg-gradient-to-r from-blue-400 to-blue-800 text-white font-medium rounded-lg 
+                  ${
+                    loading
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:opacity-90"
+                  } transition-opacity`}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
+
+              {status === "sucess" && (
+                <p className="text-green-500">Message sent successfully!</p>
+              )}
+              {status === "error" && (
+                <p className="text-red-500">
+                  Something went wrong. Please try again.
+                </p>
+              )}
             </form>
 
             {/* Social Links */}
