@@ -71,7 +71,7 @@ const projectData = [
     title: "Lottery Scanner (Group)",
     description:
       "Developed a mobile app enabling users to scan lottery tickets, automatically check results, and receive winning notifications through a user-friendly interface and accurate scanning algorithms.",
-    image: "assets/projects/vishwa.jpg",
+    image: "assets/projects/lottery.jpg",
     tech: ["Flutter", "Firebase"] as const,
     github: "https://github.com/sumira/lottery-scanner-app",
     demo: "",
