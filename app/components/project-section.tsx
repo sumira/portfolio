@@ -20,7 +20,6 @@ import {
   SiGooglegemini,
 } from "react-icons/si";
 import { BiMobileAlt } from "react-icons/bi";
-import BlynkIcon from "/public/assets/icons/blynk.png";
 
 import React, { JSX } from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
