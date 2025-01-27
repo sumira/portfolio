@@ -15,8 +15,12 @@ import {
   SiZod,
   SiMqtt,
   SiTailwindcss,
+  SiFlutter,
+  SiFirebase,
+  SiGooglegemini,
 } from "react-icons/si";
 import { BiMobileAlt } from "react-icons/bi";
+import BlynkIcon from "/public/assets/icons/blynk.png";
 
 import React, { JSX } from "react";
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
@@ -36,6 +40,9 @@ const techStackIcons: { [key: string]: JSX.Element } = {
   MQTT: <SiMqtt className="text-[#ca0c0c]" />,
   GitHub: <FaGithub className="text-[#181717]" />,
   TailwindCSS: <SiTailwindcss className="text-[#06B6D4]" />,
+  Flutter: <SiFlutter className="text-[#02569B]" />,
+  Firebase: <SiFirebase className="text-[#FFCA28]" />,
+  Gemini: <SiGooglegemini className="text-[#FFCA28]" />,
 };
 
 const projectData = [
@@ -51,22 +58,53 @@ const projectData = [
   },
   {
     id: 2,
-    title: "Aquashield",
+    title: "Human Intrusion Detection",
     description:
-      "AquaShield is a water leak detection system that monitors flow rates to identify sudden leaks in domestic settings. Powered by an ESP32, it provides real-time alerts and notifications, helping users prevent water wastage and damage effectively by real time monitoring.",
-    image: "assets/projects/aquashield.jpg",
-    tech: ["ESP32", "Arduino", "GSM"] as const,
-    github: "https://github.com/sumira/AquaShield",
+      "The human intrusion detection system integrates an ESP32-CAM to capture images, which are processed with the Google Gemini API for real-time detection and alerts. 433 MHz RF modules is used for wireless communication, enabling efficient monitoring and enhanced security with AI-powered image analysis and edge computing.",
+    image: "assets/projects/humanintrusion.jpg",
+    tech: ["ESP32", "Arduino", "Gemini"] as const,
+    github: "https://github.com/sumira/human-intrusion-detection",
+    demo: "",
+  },
+
+  {
+    id: 3,
+    title: "Lottery Scanner (Group)",
+    description:
+      "Developed a mobile app enabling users to scan lottery tickets, automatically check results, and receive winning notifications through a user-friendly interface and accurate scanning algorithms.",
+    image: "assets/projects/vishwa.jpg",
+    tech: ["Flutter", "Firebase"] as const,
+    github: "https://github.com/sumira/lottery-scanner-app",
     demo: "",
   },
   {
-    id: 3,
+    id: 4,
     title: "Institute Management System",
     description:
       "The Vishwa Institute Management System streamlines student, course, and staff management for Vishwa Institute in Balangoda, Sri Lanka. With secure authentication, role-based access, and responsive design, it offers a user-friendly platform tailored to the institute's needs.",
     image: "assets/projects/vishwa.jpg",
     tech: ["NextJS", "MongoDB", "Clerk", "Zod", "TailwindCSS"] as const,
     github: "https://github.com/sahan-chinthaka/vishwa-institute",
+    demo: "",
+  },
+  {
+    id: 5,
+    title: "Green House Monitoring",
+    description:
+      "The ESP8266-based system monitors temperature and humidity, sending real-time data to the Blynk app. Users can track conditions remotely and receive alerts. This ensures optimal plant growth with minimal effort.",
+    image: "assets/projects/greenhouse.jpg",
+    tech: ["Arduino", "ESP32"] as const,
+    github: "https://github.com/sumira/Green-House-Monitoring",
+    demo: "",
+  },
+  {
+    id: 6,
+    title: "Aquashield (Ongoing)",
+    description:
+      "AquaShield is a water leak detection system that monitors flow rates to identify sudden leaks in domestic settings. Powered by an ESP32, it provides real-time alerts and notifications, helping users prevent water wastage and damage effectively by real time monitoring.",
+    image: "assets/projects/aquashield.jpg",
+    tech: ["ESP32", "Arduino", "GSM"] as const,
+    github: "https://github.com/sumira/AquaShield",
     demo: "",
   },
 ];
@@ -82,7 +120,7 @@ const Projects = () => {
           {projectData.map((project) => (
             <Card
               key={project.id}
-              className="py-4 bg-black/40 backdrop-blur-3xl border-none hover:scale-105 transition-transform"
+              className="py-4 bg-black/20 backdrop-blur-3xl border-none hover:scale-105 transition-transform"
               isPressable
             >
               <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
