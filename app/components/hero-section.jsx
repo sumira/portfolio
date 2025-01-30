@@ -134,11 +134,12 @@ const HeroSection = () => {
               className="flex-1 text-center md:text-left"
             >
               <p className="text-gray-300 leading-relaxed font-poppins font-light text-lg md:text-xl text-justify px-2">
-              A passionate developer specializing in <span className="bg-gradient-to-r from-purple-500 to-indigo-600 bg-clip-text text-transparent">IoT development</span>, leveraging cutting-edge technologies like <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">ESP32</span> and <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">MQTT</span> for real-time monitoring and control systems.
-              With a focus on <span className="bg-blue-700 bg-clip-text text-transparent">smart devices</span> and <span className="bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">automation</span>, I create connected solutions that empower users to monitor and manage systems effectively.
-              Additionally, I specialize in <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">full-stack development</span>, with expertise in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">React</span>, <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Node.js</span>, and cloud technologies.
-              Committed to creating <span className="bg-blue-700 bg-clip-text text-transparent">efficient, scalable</span>, and user-friendly applications.
+              A passionate developer specializing in <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">full-stack development</span> and <span className="bg-gradient-to-r from-purple-500 to-indigo-600 bg-clip-text text-transparent">IoT development</span>.  
+              With expertise in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">React</span>, <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Node.js</span>, and cloud technologies, I build scalable, user-friendly applications tailored for seamless user experiences.  
+              Additionally, I develop **smart, connected solutions** by integrating <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">ESP32</span>, <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">MQTT</span>, and <span className="bg-blue-700 bg-clip-text text-transparent">automation</span> for real-time monitoring and control systems.  
+              Committed to delivering <span className="bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">efficient, scalable</span> solutions that bridge the gap between software and hardware innovation.
             </p>
+
               <div className="px-2 mt-4 flex justify-center gap-6 ">
              <a
               href="https://github.com/sumira/"
